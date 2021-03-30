@@ -168,7 +168,14 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arr1, stringToSearch){
-    return arr1.filter(arrayItem => arrayItem.includes(stringToSearch));
+    let filteredFlavors = [];
+    for(let i = 0; i < arr1.length; i++){
+        if(arr1[i].includes(stringToSearch)){
+            filteredFlavors.push(arr1[i]);
+        }
+    }
+
+    return filteredFlavors;
 }
 
 
